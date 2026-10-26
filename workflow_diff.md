@@ -27,4 +27,4 @@
 - torch pinned to CPU build to stay within 4 GB VRAM budget (embedding runs on CPU only)
 - `.env` is gitignored; `.env.example` committed with all required keys
 
-**Commit:** `TBD — scaffold not yet committed`
+**Commit:** `a926673` — `feat(scaffold): initialize AgentGuard evaluation repository and project baseline`
