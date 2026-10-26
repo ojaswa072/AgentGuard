@@ -1,0 +1,35 @@
+# ── FastAPI / ASGI ────────────────────────────────────────────────────────────
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+python-multipart==0.0.20
+
+# ── Database ──────────────────────────────────────────────────────────────────
+sqlalchemy[asyncio]==2.0.36
+asyncpg==0.30.0
+alembic==1.14.0
+pgvector==0.3.6
+
+# ── Pydantic (settings + request/response models) ─────────────────────────────
+pydantic==2.10.3
+pydantic-settings==2.7.0
+
+# ── Embeddings ────────────────────────────────────────────────────────────────
+sentence-transformers==3.3.1
+# torch pinned to CPU build to fit 4 GB VRAM budget (embedding runs on CPU)
+torch==2.5.1+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# ── HTTP client (Ollama + Gemini calls) ───────────────────────────────────────
+httpx==0.28.1
+
+# ── Google Generative AI (optional, P1 only — do not import unconditionally) ──
+# google-generativeai   # pin at the start of P1 Phase; check live docs for model names
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+pytest==8.3.4
+pytest-asyncio==0.24.0
+pytest-cov==6.0.0
+httpx==0.28.1   # also used as AsyncClient in tests
+
+# ── Dev / Linting ─────────────────────────────────────────────────────────────
+ruff==0.8.4
